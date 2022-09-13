@@ -16,7 +16,7 @@
 * `git pull --set-upstream` - pull the live version down
 
 
-* git checkout <hash_key^ <folder_path>/>file> - restore a previously deleted file that has been commited and pushed to Github 
+* `git checkout <hash_key^ <folder_path>/>file>` - restore a previously deleted file that has been commited and pushed to Github 
 
 
 ### Git Stats
