@@ -7,16 +7,23 @@
 * `git push` - push commit
 * `git checkout <filename>` - revert to upstream
 * `git checkout -b my_branch_name` - create and checkout on branch
+
+
 * `git branch` check which branch your on
 * `git branch <branch_name>` - create a branch
+* `git branch -m <new_branch_name>` - rename local git branch
+
 * `git push -u origin my_branch_name` - tell github that you have made a new branch - otherwise it will fail when attempting to push
 * `git push origin --delete remoteBranchName` - delete branch remotely (and locally)
 * `git reset --hard origin/branch_to_overwrite` - hard reset if something breaks
+
 * `git reset --hard && git pull` - reset and pull
 * `git pull --set-upstream` - pull the live version down
 
-
+* `git checkout <new_branch_name> <hash_key>(commit number)` - restore a previously deleted branch that has been pushed and committed to GitHub
 * `git checkout <hash_key^ <folder_path>/>file>` - restore a previously deleted file that has been commited and pushed to Github 
+
+* `git log` - check the commit history of a repo in the terminal.
 
 
 ### Git Stats
