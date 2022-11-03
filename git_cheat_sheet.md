@@ -2,17 +2,37 @@
 
 * `git remote show origin` - check which repo you are pointing at
 * `git add <filename>` - add a file to your commit - https://git-scm.com/docs/git-add
+* `git reset` - Undo staging changes to commit 
 * `git log --name-status` - see last commit items
 * `git commit -m <commit_message>` - stage commit
+* `git commit <filename> -m <commit_message>` - add and commit a change in 1 line
 * `git push` - push commit
 * `git checkout <filename>` - revert to upstream
 * `git checkout -b my_branch_name` - create and checkout on branch
 
+#### git merges/:
+* `git merge <other_branch_name>` - merge changes from a different branch into the current branch.
 
-* `git branch` check which branch your on
+### merging individual files :O
+
+* `git checkout --patch <branch_to_merge_from> <PATH_OF_FILE_1> <PATH_OF_FILE_2>` - Merge a single or multiple files from one branch into another.
+  Options available after running this command:
+    y : Yes, implement all the changes shown
+    n : No, I want to keep the file as it is
+    e : Edit, I wish to pick which changes to keep
+
+NUCLEAR OPTION - [docs](https://git-scm.com/docs/git-merge-file)
+* `git merge-file <our_current_file> <their_file> <base_file>` - Run a 3 way file merge
+
+
+#### git Branches:
+* `git branch` check which branch you are on
 * `git branch <branch_name>` - create a branch
 * `git branch -m <new_branch_name>` - rename local git branch
+* `git branch --all` - show all branches - local and remote
+* `git checkout -b <new_branch_name> <old_branch>` - create a branch, by branching off another branch
 
+#### git push/pulls:
 * `git push -u origin my_branch_name` - tell github that you have made a new branch - otherwise it will fail when attempting to push
 * `git push origin --delete remoteBranchName` - delete branch remotely (and locally)
 * `git reset --hard origin/branch_to_overwrite` - hard reset if something breaks
@@ -24,6 +44,7 @@
 * `git checkout <hash_key^ <folder_path>/>file>` - restore a previously deleted file that has been commited and pushed to Github 
 
 * `git log` - check the commit history of a repo in the terminal.
+*  `git clone <github ssh url>` clone a copy of a repo in current directory
 
 
 ### Git Stats
