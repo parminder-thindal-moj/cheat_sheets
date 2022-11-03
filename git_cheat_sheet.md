@@ -10,10 +10,10 @@
 * `git checkout <filename>` - revert to upstream
 * `git checkout -b my_branch_name` - create and checkout on branch
 
-#### git merges/:
+#### git merges:
 * `git merge <other_branch_name>` - merge changes from a different branch into the current branch.
 
-### merging individual files :O
+#### Merging individual files :O
 
 * `git checkout --patch <branch_to_merge_from> <PATH_OF_FILE_1> <PATH_OF_FILE_2>` - Merge a single or multiple files from one branch into another.
   Options available after running this command:
@@ -24,8 +24,7 @@
 NUCLEAR OPTION - [docs](https://git-scm.com/docs/git-merge-file)
 * `git merge-file <our_current_file> <their_file> <base_file>` - Run a 3 way file merge
 
-
-#### git Branches:
+#### git branches:
 * `git branch` check which branch you are on
 * `git branch <branch_name>` - create a branch
 * `git branch -m <new_branch_name>` - rename local git branch
