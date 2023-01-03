@@ -1,4 +1,4 @@
-### Git Commands
+### git Commands
 
 * `git remote show origin` - check which repo you are pointing at
 * `git add <filename>` - add a file to your commit - https://git-scm.com/docs/git-add
@@ -8,10 +8,35 @@
 * `git commit <filename> -m <commit_message>` - add and commit a change in 1 line
 * `git push` - push commit
 * `git checkout <filename>` - revert to upstream
-* `git checkout -b my_branch_name` - create and checkout on branch
+* `git checkout -b <branch_name>` - checkout a branch 
+* `git switch <branch_name>` checkout a branch
+* `git checkout -b <branch_name>` - create and checkout on branch
+
+#### git branches:
+* `git branch` check which branch you are on
+* `git branch -v -a` - view all branchs (including remote)
+* `git branch <branch_name>` - create a branch
+* `git branch -m <new_branch_name>` - rename local git branch
+* `git branch --all` - show all branches - local and remote
+* `git checkout -b <new_branch_name> <old_branch>` - create a branch, by branching off another branch
+
+
+* `git checkout -D <branch_name> - delete a branch locally.
+* `git remote prune origin` - deletes all stale remote tracking branches. These branches have already been removed from the remote repo, but are still lavialble locally. Add `--dry-run` to report what branches will be prune, without actually pruning them.
+
 
 #### git merges:
-* `git merge <other_branch_name>` - merge changes from a different branch into the current branch.
+First:
+  - `git checkout -b <your_branch>` - move to the branch you want to MERGE changes INTO to.
+  - `git pull origin` - Update your local branch with the remote branch.
+* `git merge <other_branch>` - merge changes from a different branch into the current branch.
+
+For `fatal: refusing to merge unrelated histories`: 
+`git pull origin <branchname> --allow-unrelated-histories` 
+
+OR:
+- `git merge <other_branch> --allow-unrelated-histories`
+
 
 #### Merging individual files :O
 
@@ -24,12 +49,7 @@
 NUCLEAR OPTION - [docs](https://git-scm.com/docs/git-merge-file)
 * `git merge-file <our_current_file> <their_file> <base_file>` - Run a 3 way file merge
 
-#### git branches:
-* `git branch` check which branch you are on
-* `git branch <branch_name>` - create a branch
-* `git branch -m <new_branch_name>` - rename local git branch
-* `git branch --all` - show all branches - local and remote
-* `git checkout -b <new_branch_name> <old_branch>` - create a branch, by branching off another branch
+
 
 #### git push/pulls:
 * `git push -u origin my_branch_name` - tell github that you have made a new branch - otherwise it will fail when attempting to push
@@ -39,11 +59,26 @@ NUCLEAR OPTION - [docs](https://git-scm.com/docs/git-merge-file)
 * `git reset --hard && git pull` - reset and pull
 * `git pull --set-upstream` - pull the live version down
 
+
+For Error: - "_fatal: refusing to merge unrelated histories_"
+* `git pull origin master --allow-unrelated-histories` - 
+
 * `git checkout <new_branch_name> <hash_key>(commit number)` - restore a previously deleted branch that has been pushed and committed to GitHub
 * `git checkout <hash_key^ <folder_path>/>file>` - restore a previously deleted file that has been commited and pushed to Github 
 
 * `git log` - check the commit history of a repo in the terminal.
-*  `git clone <github ssh url>` clone a copy of a repo in current directory
+* `git clone <github ssh url>` clone a copy of a repo in current directory
+
+
+##### git pull whilst ignoring local changes
+* `git reset --hard`
+* `git pull`
+
+### Git Refs 
+
+- [git refs stackoverflow](https://stackoverflow.com/questions/26046698/git-refname-origin-master-is-ambiguous/26047558#26047558)
+* `git show-ref origin/main` -- displayed references in a local repository along with the associated commit ID's.
+* `git update-ref -d refs/heads/origin/master` - delete the refs of a local repository
 
 
 ### Git Stats
@@ -60,6 +95,7 @@ NUCLEAR OPTION - [docs](https://git-scm.com/docs/git-merge-file)
 
 <br>
 <hr>
+
 
 ## Working with github
 
