@@ -22,7 +22,7 @@
 
 
 * `git checkout -D <branch_name> - delete a branch locally.
-* `git remote prune origin` - deletes all stale remote tracking branches. These branches have already been removed from the remote repo, but are still lavialble locally. Add `--dry-run` to report what branches will be prune, without actually pruning them.
+* `git remote prune origin` - deletes all stale remote tracking branches. These branches have already been removed from the remote repo, but are still available locally. Add `--dry-run` to report what branches will be prune, without actually pruning them.
 
 
 #### git merges:
@@ -31,8 +31,9 @@ First:
   - `git pull origin` - Update your local branch with the remote branch.
 * `git merge <other_branch>` - merge changes from a different branch into the current branch.
 
-For `fatal: refusing to merge unrelated histories`: 
-`git pull origin <branchname> --allow-unrelated-histories` 
+For git error: "_fatal: refusing to merge unrelated histories_"
+
+- `git pull origin <branchname> --allow-unrelated-histories` 
 
 OR:
 - `git merge <other_branch> --allow-unrelated-histories`
@@ -50,7 +51,6 @@ NUCLEAR OPTION - [docs](https://git-scm.com/docs/git-merge-file)
 * `git merge-file <our_current_file> <their_file> <base_file>` - Run a 3 way file merge
 
 
-
 #### git push/pulls:
 * `git push -u origin my_branch_name` - tell github that you have made a new branch - otherwise it will fail when attempting to push
 * `git push origin --delete remoteBranchName` - delete branch remotely (and locally)
@@ -65,6 +65,8 @@ For Error: - "_fatal: refusing to merge unrelated histories_"
 
 * `git checkout <new_branch_name> <hash_key>(commit number)` - restore a previously deleted branch that has been pushed and committed to GitHub
 * `git checkout <hash_key^ <folder_path>/>file>` - restore a previously deleted file that has been commited and pushed to Github 
+
+----
 
 * `git log` - check the commit history of a repo in the terminal.
 * `git clone <github ssh url>` clone a copy of a repo in current directory
