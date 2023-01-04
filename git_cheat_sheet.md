@@ -9,7 +9,7 @@
 * `git push` - push commit
 * `git checkout <filename>` - revert to upstream
 * `git checkout -b <branch_name>` - checkout a branch 
-* `git switch <branch_name>` checkout a branch
+* `git switch <branch_name>` switch to a local OR remote a branch
 * `git checkout -b <branch_name>` - create and checkout on branch
 
 #### git branches:
@@ -21,7 +21,7 @@
 * `git checkout -b <new_branch_name> <old_branch>` - create a branch, by branching off another branch
 
 
-* `git checkout -D <branch_name> - delete a branch locally.
+* `git checkout -D <branch_name>` - delete a branch locally.
 * `git remote prune origin` - deletes all stale remote tracking branches. These branches have already been removed from the remote repo, but are still available locally. Add `--dry-run` to report what branches will be prune, without actually pruning them.
 
 
