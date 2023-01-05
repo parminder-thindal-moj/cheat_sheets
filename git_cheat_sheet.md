@@ -29,7 +29,9 @@
 First:
   - `git checkout -b <your_branch>` - move to the branch you want to MERGE changes INTO to.
   - `git pull origin` - Update your local branch with the remote branch.
-* `git merge <other_branch>` - merge changes from a different branch into the current branch.
+  
+Then:
+  - `git merge <other_branch>` - merge changes from a different branch into the current branch.
 
 For git error: "_fatal: refusing to merge unrelated histories_"
 
@@ -101,11 +103,37 @@ For Error: - "_fatal: refusing to merge unrelated histories_"
 
 ## Working with github
 
-#### Cloning from a specific branch
-`git clone -b <branch-to-clone> <ssh-key> clone-name`
+### Cloning
+
+`git clone <YOUR-GIT-REPO-URL>` - git clone a specific repo
+
+`git clone -b <branch-to-clone> <YOUR-GIT-REPO-URL> clone-name` - clone repo with a specific branch
 
 Or in a working example:
 `git clone -b write_df_to_s3_fix git@github.com:moj-analytical-services/s3tools.git alt-ringfence`
+
+
+#### Clone - with submodules
+
+`git clone --recursive <YOUR-GIT-REPO-URL>` - clone a repo with the submodules
+
+DON'T FORGET TO INITIALISE AND UPDATE THE SUBMODULE REPO - REMEMBER SUBMODULES ACT LIKE NORMAL GIT REPOS!
+
+PATH TO CURRENT REPO then:
+
+`git submodule init` - initialise the git submodule
+`git submodule update` - update the submodule
+
+#### git submodules:
+
+TODO - write submodules stuff
+
+#### updating a git remote URL
+
+A useful command if you decide to change your repository name (_for whatever reason_) and you have already worked on the project before. You will then need to update the remote with the following command:
+
+`git remote set-url origin new.git.url/here` - [Stackoverflow](https://stackoverflow.com/questions/2432764/how-do-i-change-the-uri-url-for-a-remote-git-repository)
+
 <br><br>
 #### Branches
 `git push origin --delete {the_remote_branch} # Delete branch locally + remotely`
