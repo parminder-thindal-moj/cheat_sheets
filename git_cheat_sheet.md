@@ -12,6 +12,15 @@
 * `git switch <branch_name>` switch to a local OR remote a branch
 * `git checkout -b <branch_name>` - create and checkout on branch
 
+##### adding an empty directory to git
+To add a empty folder to git, and subsequently push to github, create your empty directory(s), and then add a `.gitkeep` file to your newly created directory(s) Then update your .gitignore files so that it does not ignore these files e.g.
+
+```!parent_directory/your_new_directory/.gitkeep```
+
+##### What's the point of this???
+
+You might have created folders to store files like `outputs` or `visualisations`, but can't push to GitHub for data protection reasons. However you want other collaborators to have the same folder structure that you have when they clone your project, and want to run the code. This is a way to do that.
+
 #### git branches:
 * `git branch` check which branch you are on
 * `git branch -v -a` - view all branchs (including remote)
