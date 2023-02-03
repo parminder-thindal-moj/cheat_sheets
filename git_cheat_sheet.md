@@ -8,7 +8,7 @@
 * `git commit <filename> -m <commit_message>` - add and commit a change in 1 line
 * `git push` - push commit
 * `git checkout <filename>` - revert to upstream
-* `git checkout -b <branch_name>` - checkout a branch 
+* `git checkout -b <branch_name>` - checkout a branch /create new branch
 * `git switch <branch_name>` switch to a local OR remote a branch
 * `git checkout -b <branch_name>` - create and checkout on branch
 
