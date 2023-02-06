@@ -16,3 +16,9 @@ note `python -m` = python module shorthand.
 - `jupyter kernelspec list` - list all of the availabile kernels and their paths
 - `jupyter kernelspec uninstall <unwanted-kernel>` - uninstall unwanted kernel, will be prompted [y/N] in terminal before it's ran completely;.
 - 
+
+
+Generate requirements file:
+
+- `pip list --format=freeze > requirements.txt` - to generate only packages being used in the current project. (Make sure to sure command whilst your VENV is activatedl!
+- 
