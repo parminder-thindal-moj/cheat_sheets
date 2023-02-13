@@ -50,6 +50,42 @@ OR:
 - `git merge <other_branch> --allow-unrelated-histories`
 
 
+
+ALTERNATIVE MERGING CHANGES FROM ANOTHER BRANCH:
+- `git checkout | switch <base_branchg>
+- `git rebase <some_other_branch_with_changes_to_add>
+
+You might run into conflicts when trying to rebase:
+
+``` CONFLCTS EXAMPLE
+
+<<<<<< - conflict dividers
+
+<<<<<<< HEAD - your current branch
+this is some content to mess with
+content to append
+======= - center of conflict
+totally different content to merge later
+>>>>>>> new_branch_to_merge_later - other branch
+```
+
+Resolve by opening the affected files and resolving the conflicts.
+Once conflicts have been resolved you can run:
+- `git rebase --continue` to finish to the merging options
+
+BUT WHY REBASE?
+
+Move or combine a set of commits to a new base commit. 
+
+
+#### Removing files
+
+- `rm -rf <your_file_here>`
+- `git rm --cached <your_file_here> ` - delete a specific file from a git cache.
+- `git rm -r --cached` - Clear entire local cache. -r used to recursively rempove files from the git cache
+
+
+
 #### Merging individual files :O
 
 * `git checkout --patch <branch_to_merge_from> <PATH_OF_FILE_1> <PATH_OF_FILE_2>` - Merge a single or multiple files from one branch into another.
