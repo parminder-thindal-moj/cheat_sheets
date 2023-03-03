@@ -113,6 +113,14 @@ For Error: - "_fatal: refusing to merge unrelated histories_"
 * `git checkout <new_branch_name> <hash_key>(commit number)` - restore a previously deleted branch that has been pushed and committed to GitHub
 * `git checkout <hash_key^ <folder_path>/>file>` - restore a previously deleted file that has been commited and pushed to Github 
 
+
+
+For Error: - "failed to push some refs to <your_repo_here>"
+
+![Screenshot 2023-03-03 at 14 12 09](https://user-images.githubusercontent.com/93984622/222779993-417b2b15-0ecb-4081-a7a4-28f4ae90e928.png)
+
+* `git pull origin --rebase`
+![Screenshot 2023-03-03 at 14 12 31](https://user-images.githubusercontent.com/93984622/222780547-4839bf0d-44b0-4712-a0b5-8aecb89a6f26.png)
 ----
 
 * `git log` - check the commit history of a repo in the terminal.
@@ -140,7 +148,6 @@ For Error: - "_fatal: refusing to merge unrelated histories_"
 [More on git config here](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
 [SSH key platform notes all here](https://user-guidance.services.alpha.mojanalytics.xyz/github.html#jupyterlab)
-
 
 <br>
 <hr>
