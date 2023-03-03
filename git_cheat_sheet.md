@@ -120,7 +120,8 @@ For Error: - "failed to push some refs to <your_repo_here>"
 ![Screenshot 2023-03-03 at 14 12 09](https://user-images.githubusercontent.com/93984622/222779993-417b2b15-0ecb-4081-a7a4-28f4ae90e928.png)
 
 * `git pull origin --rebase`
-![Screenshot 2023-03-03 at 14 12 31](https://user-images.githubusercontent.com/93984622/222780547-4839bf0d-44b0-4712-a0b5-8aecb89a6f26.png)
+
+![8Fay3](https://user-images.githubusercontent.com/93984622/222781024-5b6fd951-72dd-432b-a4d1-f202413ad17e.png)
 ----
 
 * `git log` - check the commit history of a repo in the terminal.
