@@ -2,6 +2,8 @@
 
 * `git remote show origin` - check which repo you are pointing at
 * `git add <filename>` - add a file to your commit - https://git-scm.com/docs/git-add
+* `git commit -am "your commit message here"` - add all files and commit in one line.
+* `git commit -m "First commit message" -m "Second commit message"` - Add multi line commit messages.
 * `git reset` - Undo staging changes to commit 
 * `git log --name-status` - see last commit items
 * `git commit -m <commit_message>` - stage commit
