@@ -10,9 +10,7 @@
 * `git commit <filename> -m <commit_message>` - add and commit a change in 1 line
 * `git push` - push commit
 * `git checkout <filename>` - revert to upstream
-* `git checkout -b <branch_name>` - checkout a branch /create new branch
-* `git switch <branch_name>` switch to a local OR remote a branch
-* `git checkout -b <branch_name>` - create and checkout on branch
+* git fetch --prune
 
 ##### adding an empty directory to git
 To add a empty folder to git, and subsequently push to github, create your empty directory(s), and then add a `.gitkeep` file to your newly created directory(s) Then update your .gitignore files so that it does not ignore these files e.g.
@@ -29,11 +27,15 @@ You might have created folders to store files like `outputs` or `visualisations`
 * `git branch <branch_name>` - create a branch
 * `git branch -m <new_branch_name>` - rename local git branch
 * `git branch --all` - show all branches - local and remote
+* `git switch <branch_name>` switch to a local OR remote a branch
 * `git checkout -b <new_branch_name> <old_branch>` - create a branch, by branching off another branch
+* `git checkout -b <branch_name>` - checkout a branch /create new branch
+
 
 
 * `git checkout -D <branch_name>` - delete a branch locally.
 * `git remote prune origin` - deletes all stale remote tracking branches. These branches have already been removed from the remote repo, but are still available locally. Add `--dry-run` to report what branches will be prune, without actually pruning them.
+* `git fetch --prune` is the best utility for cleaning outdated branches. It will connect to a shared remote repository remote and fetch all remote branch refs. It will then delete remote refs that are no longer in use on the remote repository. It won't delete any local branches that you have though. They will need to be deleted using `git branch -D`
 
 
 #### git merges:
