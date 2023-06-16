@@ -10,7 +10,9 @@
 * `git commit <filename> -m <commit_message>` - add and commit a change in 1 line
 * `git push` - push commit
 * `git checkout <filename>` - revert to upstream
-* git fetch --prune
+* `git fetch --prune` - update local repository with branches that been deleted on GitHub.
+* `git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D` - Any local branches that are not present on GitHub will be deleted from your local repository.
+
 
 ##### adding an empty directory to git
 To add a empty folder to git, and subsequently push to github, create your empty directory(s), and then add a `.gitkeep` file to your newly created directory(s) Then update your .gitignore files so that it does not ignore these files e.g.
