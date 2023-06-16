@@ -12,6 +12,15 @@
 * `git checkout <filename>` - revert to upstream
 * `git fetch --prune` - update local repository with branches that been deleted on GitHub.
 * `git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D` - Any local branches that are not present on GitHub will be deleted from your local repository.
+Let's break down this command:
+
+  * `git branch -vv` lists all the local branches along with their tracking information.
+
+  * `grep ': gone]'` filters the branches that have the ": gone]" indicator, which means they no longer exist on GitHub.
+
+  * `awk '{print $1}'` extracts only the branch names from the filtered output.
+
+  * `xargs git branch -D` deletes the local branches that match the extracted names.
 
 
 ##### adding an empty directory to git
