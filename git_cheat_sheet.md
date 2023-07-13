@@ -39,6 +39,8 @@ You might have created folders to store files like `outputs` or `visualisations`
 * `git branch -m <new_branch_name>` - rename local git branch
 * `git branch --all` - show all branches - local and remote
 * `git switch <branch_name>` switch to a local OR remote a branch
+* `git switch -c <new_branch_name>` - create and switch to a new branch.
+  
 * `git checkout -b <new_branch_name> <old_branch>` - create a branch, by branching off another branch
 * `git checkout -b <branch_name>` - checkout a branch /create new branch
 
@@ -51,7 +53,7 @@ You might have created folders to store files like `outputs` or `visualisations`
 
 #### git merges:
 First:
-  - `git checkout -b <your_branch>` - move to the branch you want to MERGE changes INTO to.
+  - `git checkout -b <your_branch>` | `git switch <your_branch>`- move to the branch you want to MERGE changes INTO to.
   - `git pull origin` - Update your local branch with the remote branch.
   
 Then:
@@ -67,8 +69,8 @@ OR:
 
 
 ALTERNATIVE MERGING CHANGES FROM ANOTHER BRANCH:
-- `git checkout | switch <base_branchg>
-- `git rebase <some_other_branch_with_changes_to_add>
+- `git checkout | switch <base_branch>` 
+- `git rebase <some_other_branch_with_changes_to_add>`
 
 You might run into conflicts when trying to rebase:
 
@@ -236,10 +238,18 @@ git push secondary --all
 Please note, any changes to your secondary repo will lead to errors when attempting to run the above lines.
 <br><br>
 #### Resetting to a previous commit
+
+* `git reset <commit_ID>` - reset to a previous commit version
+
+* `git checkout <commit_ID>` - This will detach your HEAD, that is, leave you with no branch checked out.
+
+* `git checkout -b old-state <commit_ID>` - Or if you want to make commits while you're there, go ahead and make a new branch while you're at it.
+
+
 More here - https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit
 
 **Start by resetting to your previous commit**
-`git reset --hard <commitId> && git clean -f
+`git reset --hard <commit_Id> && git clean -f`
 **Then update the github version**
 ```
 git push origin/master --force
