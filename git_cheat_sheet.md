@@ -11,16 +11,18 @@
 * `git push` - push commit
 * `git checkout <filename>` - revert to upstream
 * `git fetch --prune` - update local repository with branches that been deleted on GitHub.
-* `git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D` - Any local branches that are not present on GitHub will be deleted from your local repository.
+* `git branch -vv | grep ': gone]'| grep -v "\*" | awk '{ print $1; }' | xargs -r git branch -d` - Any local branches that are not present on GitHub will be deleted from your local repository.
 Let's break down this command:
 
   * `git branch -vv` lists all the local branches along with their tracking information.
 
   * `grep ': gone]'` filters the branches that have the ": gone]" indicator, which means they no longer exist on GitHub.
 
-  * `awk '{print $1}'` extracts only the branch names from the filtered output.
+  * `grep -v "\*"'` will fetch only lines that do not contain an asterisk. This will ignore the branch you are currently on and also prevent that the “git branch -d” is executed with a “*” at the end which would result in deleting all your local branches
 
-  * `xargs git branch -D` deletes the local branches that match the extracted names.
+  * `awk '{print $1}'` - will fetch the output until the first white space, which will result in the local branch name.
+     
+  * `xargs git branch -d` deletes the local branches that match the extracted names.
 
 
 ##### adding an empty directory to git
