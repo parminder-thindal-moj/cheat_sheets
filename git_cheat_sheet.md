@@ -2,6 +2,7 @@
 
 * `git remote show origin` - check which repo you are pointing at
 * `git add <filename>` - add a file to your commit - https://git-scm.com/docs/git-add
+* `git add `**/**<string>*` - add all files with a specific regex string to commit regardless of their directory location ('**/')
 * `git commit -am "your commit message here"` - add all files and commit in one line.
 * `git commit -m "First commit message" -m "Second commit message"` - Add multi line commit messages.
 * `git reset` - Undo staging changes to commit 
