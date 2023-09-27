@@ -17,8 +17,18 @@ note `python -m` = python module shorthand.
 - `jupyter kernelspec uninstall <unwanted-kernel>` - uninstall unwanted kernel, will be prompted [y/N] in terminal before it's ran completely;.
 - 
 
+## Adding Venv to VSCode Jupyter Notebook Kernel:
+When creating venv's in VS Code, sometimes the kernel will automatically be detected in Jupyter Notebooks. Where it doesn't detect this automatically, try these steps
 
-Generate requirements file:
+1) Press Command+Shift+P to open a new command pallete
+2) Select > Python: Select Intepreter to start jupyter notebook server
+          > Select Interpreter Path
+          > Find - navigate to python3 version (e.g. python3.11) in bin folder
+3) - Close & ReOpen the notebook again
+   - or Restart VS Code for the changes to take effect.
+
+
+## Generate requirements file:
 
 - `pip list --format=freeze > requirements.txt` - to generate only packages being used in the current project. (Make sure to sure command whilst your VENV is activatedl!
 - 
