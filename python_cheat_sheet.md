@@ -1,11 +1,29 @@
 Jupyter Terminal Commands:
 
+## MacOs:
 note `python -m` = python module shorthand.
 
 - `python -m venv <new_venv>` - Create new venv.
 - `python3.10 -m venv <new_venv>` - Specify python version to create a venv of the python version
 
 - `source <new_venv>/bin/activate` -  Activate virtual environment. (Make sure you specicy the right path)
+
+## Windows
+<details>
+  <summary>Click for Windows commands</summary>
+  1. `python -m venv {path_to_your_folder}/{venv_name}'
+</details>
+
+## Activation:
+
+| Platform | Shell | Command to activate virtual environment |
+|----------|-------|-----------------------------------------|
+| POSIX   | bash/zsh | `$ source <venv>/bin/activate` |
+| POSIX   | fish | `$ source <venv>/bin/activate.fish` |
+| POSIX   | csh/tcsh | `$ source <venv>/bin/activate.csh` |
+| PowerShell | PowerShell | `$ <venv>/bin/Activate.ps1` |
+| Windows | cmd.exe | `C:\> <venv>\Scripts\activate.bat` |
+| Windows | PowerShell | `PS C:\> <venv>\Scripts\Activate.ps1` |
 
 ## Get Jupyter Venv working on the platform
 
