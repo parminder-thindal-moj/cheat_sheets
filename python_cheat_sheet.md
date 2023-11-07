@@ -1,6 +1,6 @@
-Jupyter Terminal Commands:
+# Terminal Commands:
 
-## MacOs:
+## MacOS:
 note `python -m` = python module shorthand.
 
 - `python -m venv <new_venv>` - Create new venv.
@@ -11,7 +11,7 @@ note `python -m` = python module shorthand.
 ## Windows
 <details>
   <summary>Click for Windows commands</summary>
-  1. `python -m venv {path_to_your_folder}/{venv_name}'
+  1. `python -m venv {path_to_your_folder}/{venv_name}`
 </details>
 
 ## Activation:
