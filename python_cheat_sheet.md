@@ -38,6 +38,8 @@ note `python -m` = python module shorthand.
 ## Adding Venv to VSCode Jupyter Notebook Kernel:
 When creating venv's in VS Code, sometimes the kernel will automatically be detected in Jupyter Notebooks. Where it doesn't detect this automatically, try these steps
 
+Note you will to install ipykernel in your venv, and then add your new venv to the jupyter kernels.
+
 1) Press Command+Shift+P to open a new command pallete
 2) Select > Python: Select Intepreter to start jupyter notebook server
           > Select Interpreter Path
