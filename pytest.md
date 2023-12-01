@@ -6,9 +6,13 @@
 | Show full verbosity           | \-vv                                            |
 | Pattern Matching              | \-k "expression"                                |
 | Traceback style               | \-tb=(no/long/short)                        |
-| Shows order of operaations of tests & fixtures                              | \ --setup-show                                                |
+| Shortcut for --capture=no              | \-s |                        |
+| By default, pytest captures and displays the standard output and standard error during the execution of tests. Can turn this off and print test outputs to console          | --capture=no                  |
+| Shows order of operations of tests & fixtures                              | \ --setup-show                                                |
 | View where fixtures are. Fixtures in conftest are located at the bottom of output.               | \--fixtures -v)                        |
 | View what fixtures are used by each test and where the fixtures are defined.               | \--fixtures-per-test)                        |
+
+
 
 
 # commands
