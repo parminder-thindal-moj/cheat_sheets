@@ -47,8 +47,3 @@ Note you will to install ipykernel in your venv, and then add your new venv to t
 3) - Close & ReOpen the notebook again
    - or Restart VS Code for the changes to take effect.
 
-
-## Generate requirements file:
-
-- `pip list --format=freeze > requirements.txt` - to generate only packages being used in the current project. (Make sure to sure command whilst your VENV is activatedl!
-- 
