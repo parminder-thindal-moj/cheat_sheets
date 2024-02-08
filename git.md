@@ -12,6 +12,8 @@
 * `git push` - push commit
 * `git checkout <filename>` - revert to upstream
 * `git fetch --prune` - update local repository with branches that been deleted on GitHub.
+* `git branch --list '{string}*` ` - list all the branches that begin with a string pattern.
+* `git branch --list '{string}*` | xargs -r git branch -D ` - delete all the branches that begin with a matching string pattern.
 * `git branch -vv | grep ': gone]'| grep -v "\*" | awk '{ print $1; }' | xargs -r git branch -d` - Any local branches that are not present on GitHub will be deleted from your local repository.
 Let's break down this command:
 
