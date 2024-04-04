@@ -5,7 +5,7 @@
 * `git add `**/**<string>*` - add all files with a specific regex string to commit regardless of their directory location ('**/')
 * `git commit -am "your commit message here"` - add all files and commit in one line.
 * `git commit -m "First commit message" -m "Second commit message"` - Add multi line commit messages.
-* `git reset` - Undo staging changes to commit 
+
 * `git log --name-status` - see last commit items
 * `git commit -m <commit_message>` - stage commit
 * `git commit <filename> -m <commit_message>` - add and commit a change in 1 line
@@ -26,6 +26,13 @@ Let's break down this command:
   * `awk '{print $1}'` - will fetch the output until the first white space, which will result in the local branch name.
      
   * `xargs git branch -d` deletes the local branches that match the extracted names.
+
+
+### git reset:
+
+* `git reset` - Undo staging changes to commit
+* `git reset 3050fc0` - Rewinds back to commit `3050fc0` but keeps changes in the working directory
+* `git reset --hard c0d30f3` - Rewinds back to commit `c0d30f3` and deletes changes
 
 
 ##### adding an empty directory to git
